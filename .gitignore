@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Local settings (the committed template is .env.example)
+.env
+
+# Certificates and private keys must never be committed
+certs/
+*.key
+*.crt
+*.pem
+
+# Runtime data created by the runner
+data/
+labs-cache/
+sessions/
+state/
+
+# Misc
+*.log
+.DS_Store

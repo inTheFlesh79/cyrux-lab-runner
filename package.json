@@ -1,0 +1,23 @@
+{
+  "name": "cyruxlabs-runner",
+  "version": "1.0.0",
+  "description": "Orchestration service of CyruxLabs: starts, tracks and stops the Docker Compose labs of each session on a Linux host.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=22.9.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "multer": "^2.3.0"
+  }
+}

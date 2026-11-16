@@ -1,0 +1,20 @@
+services:
+  labaccessproxy:
+    image: nginx:latest
+    ports:
+      - "443"
+    volumes:
+      # The runner fills in these two variables (see src/infra/docker.js), so no path of
+      # one machine is written here:
+      #   CYRUX_CERTS_DIR  folder with labproxy.crt and labproxy.key (CERTS_DIR in the runner's .env)
+      #   CYRUX_BASE_DIR   folder of this file (it holds default.conf)
+      - "${CYRUX_CERTS_DIR:?CYRUX_CERTS_DIR is not set}:/etc/nginx/ssl:ro"
+      - "${CYRUX_BASE_DIR:?CYRUX_BASE_DIR is not set}/default.conf:/etc/nginx/conf.d/default.conf:ro"
+    networks:
+      - publicnet
+      - labnet
+networks:
+  publicnet:
+    driver: bridge
+  labnet:
+    internal: true
