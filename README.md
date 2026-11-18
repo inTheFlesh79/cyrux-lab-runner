@@ -119,5 +119,5 @@ Until these are fixed:
 
 ## Related projects
 
-- **CyruxLabs frontend**: React (Vite) app where users browse and run labs.
-- **cyruxlabs-backend**: Node/Express API that manages users, labs and sessions and calls this runner.
+- **CyruxLabs frontend**: React (Vite) app where users browse and run labs. (https://github.com/camilo2701/CyruxLabs)
+- **cyruxlabs-backend**: Node/Express API that manages users, labs and sessions and calls this runner. (https://github.com/camilo2701/CyruxLabs)
